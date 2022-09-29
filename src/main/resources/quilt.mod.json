@@ -1,0 +1,39 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "xyz.xdmatthewbx",
+		"id": "unmojank",
+		"version": "${version}",
+		"metadata": {
+			"name": "UnMojank",
+			"description": "Fixes several tech debts in Minecraft",
+			"contributors": {
+				"xdMatthewbx#1337": "Owner"
+			},
+			"contact": {
+				"issues": "https://github.com/Nolij/UnMojank/issues",
+				"sources": "https://github.com/Nolij/UnMojank"
+			}
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "xyz.xdmatthewbx.unmojank.UnMojankMod"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=4.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19.2"
+			}
+		]
+	},
+	"access_widener": "unmojank.accesswidener",
+	"mixin": "unmojank.mixins.json"
+}
