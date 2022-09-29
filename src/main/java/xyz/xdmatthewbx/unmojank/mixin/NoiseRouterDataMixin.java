@@ -15,4 +15,10 @@ public class NoiseRouterDataMixin {
 		args.set(2, 384);	// height
 	}
 
+	@ModifyArgs(method = "m_psfarald", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/gen/noise/NoiseRouterData;method_42365(Lnet/minecraft/world/gen/DensityFunction;IIIIDIID)Lnet/minecraft/world/gen/DensityFunction;"))
+	private static void netherHeightLavaLakeFloorFix(Args args) {
+		args.set(6, (int) args.get(6) + 64);
+		args.set(7, (int) args.get(7) + 64);
+	}
+
 }
